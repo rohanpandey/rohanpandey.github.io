@@ -1,1 +1,1 @@
-# rohanpandey.github.io
+Clone the template and make changes accordingly in index.html
