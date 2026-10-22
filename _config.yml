@@ -15,6 +15,27 @@ permalink: /blog/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Shown in link previews and search results
+image: /images/rohan.jpg
+twitter:
+  card: summary
+social:
+  name: Rohan Pandey
+  links:
+    - https://scholar.google.com/citations?user=Xdlmg9IAAAAJ
+    - https://github.com/rohanpandey
+    - https://www.linkedin.com/in/therohanpandey/
+
+# Paste the code from Google Search Console here to verify the site:
+# webmaster_verifications:
+#   google: XXXXXXXXXXXX
+
+defaults:
+  # Old redirect page; keep it out of the sitemap
+  - scope: { path: "blogposts.html" }
+    values: { sitemap: false }
 
 feed:
   path: blog/feed.xml
