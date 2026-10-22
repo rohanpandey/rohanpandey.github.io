@@ -1,6 +1,6 @@
 title: Rohan Pandey
-description: PhD student at the Bio-NLP Lab, UMass Amherst, working on robust and reliable machine learning for healthcare.
-tagline: PhD Student, UMass Amherst
+description: PhD student in Computer Science at UMass Amherst (Bio-NLP Lab) working on machine learning, NLP, and large language models (LLMs) that hold up in the real world, especially in healthcare and science.
+tagline: PhD Student in AI, NLP & Healthcare, UMass Amherst
 author: Rohan Pandey
 url: https://rohanpandey.github.io
 baseurl: ""
@@ -21,6 +21,24 @@ plugins:
 image: /images/rohan.jpg
 twitter:
   card: summary
+# Research keywords used in structured data and llms.txt (keep these accurate)
+keywords:
+  - Machine learning
+  - Natural language processing (NLP)
+  - Large language models (LLMs)
+  - Clinical NLP
+  - AI for healthcare
+  - Electronic health records (EHR)
+  - Public health informatics
+  - Clinical risk prediction
+  - Opioid overdose prediction
+  - Homelessness risk prediction
+  - Science of AI
+  - Robustness and reliability of AI systems
+  - AI for science
+  - Information retrieval
+  - Benchmarks and evaluation
+
 social:
   name: Rohan Pandey
   links:

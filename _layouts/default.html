@@ -19,11 +19,13 @@
       "name": "Rohan Pandey",
       "url": "{{ site.url }}/",
       "image": "{{ site.url }}/images/rohan.jpg",
-      "jobTitle": "PhD Student",
+      "jobTitle": "PhD Student in Computer Science",
+      "email": "mailto:rohanpandey@umass.edu",
+      "worksFor": { "@type": "Organization", "name": "Bio-NLP Lab, UMass Amherst", "url": "https://bio-nlp.org/" },
       "description": "{{ site.description }}",
       "affiliation": { "@type": "Organization", "name": "University of Massachusetts Amherst", "url": "https://www.umass.edu/" },
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "Shiv Nadar University" },
-      "knowsAbout": ["Machine learning", "Natural language processing", "Clinical NLP", "Electronic health records", "Robustness"],
+      "knowsAbout": [{% for k in site.keywords %}"{{ k }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
       "sameAs": [{% for l in site.social.links %}"{{ l }}"{% unless forloop.last %}, {% endunless %}{% endfor %}]
     }
   }

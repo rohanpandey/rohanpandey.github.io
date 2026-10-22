@@ -115,16 +115,15 @@ p { margin: 0 0 1em; }
 .tagline {
   color: var(--muted);
   font-size: 15px;
-  margin: 0 0 2px;
-}
-
-.previously {
-  color: var(--faint);
-  font-size: 14px;
   margin: 0 0 28px;
 }
 
 .bio p { color: var(--text); }
+.bio .list-lead { margin-bottom: .4em; }
+.interests { margin: 0 0 1em; padding-left: 1.2em; }
+.interests li { margin-bottom: .45em; }
+.interests li::marker { color: var(--faint); }
+.interests strong { font-weight: 600; }
 
 .portrait {
   width: 168px;

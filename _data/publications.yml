@@ -2,10 +2,50 @@
 # authors_more (optional): extra authors hidden behind a "+ N more" toggle; authors_last is shown after it.
 # badge (optional): small pill like "Under review" or "Oral".
 
+- title: "OverdoseMoE: A Multi-Expert Framework for Opioid Overdose Risk Prediction"
+  url: https://arxiv.org/abs/2609.40108
+  authors: "Mingchen Li, <me>Rohan Pandey</me>, Junhui Qian, Feiyun Ouyang, Sunjae Kwon, Hong Yu"
+  venue: arXiv preprint
+  year: 2026
+  badge: Under review
+  links:
+    - { label: arXiv, url: "https://arxiv.org/abs/2609.40108" }
+    - { label: PDF, url: "https://arxiv.org/pdf/2609.40108" }
+  bibtex: |
+    @misc{li2026overdosemoe,
+      title         = {OverdoseMoE: A Multi-Expert Framework for Opioid Overdose Risk Prediction},
+      author        = {Li, Mingchen and Pandey, Rohan and Qian, Junhui and Ouyang, Feiyun and Kwon, Sunjae and Yu, Hong},
+      year          = {2026},
+      eprint        = {2609.40108},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.CL},
+      url           = {https://arxiv.org/abs/2609.40108}
+    }
+
+- title: "MUSES: A Benchmark for Prospective Intellectual-Roots Retrieval"
+  url: https://arxiv.org/abs/2609.00313
+  authors: "<me>Rohan Pandey</me>, Sunjae Kwon, Hong Yu"
+  venue: arXiv preprint
+  year: 2026
+  badge: Under review
+  links:
+    - { label: arXiv, url: "https://arxiv.org/abs/2609.00313" }
+    - { label: PDF, url: "https://arxiv.org/pdf/2609.00313" }
+  bibtex: |
+    @misc{pandey2026muses,
+      title         = {MUSES: A Benchmark for Prospective Intellectual-Roots Retrieval},
+      author        = {Pandey, Rohan and Kwon, Sunjae and Yu, Hong},
+      year          = {2026},
+      eprint        = {2609.00313},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.IR},
+      url           = {https://arxiv.org/abs/2609.00313}
+    }
+
 - title: "Predicting first-episode homelessness among US Veterans using longitudinal EHR data: time-varying models and social risk factors"
   url: https://arxiv.org/abs/2602.02731
   authors: "<me>Rohan Pandey*</me>, Haijuan Yan, Hong Yu, Jack Tsai"
-  venue: Manuscript
+  venue: arXiv preprint
   year: 2026
   badge: Under review
   links:
