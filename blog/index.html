@@ -1,0 +1,50 @@
+---
+layout: default
+title: Blog
+description: Writing by Rohan Pandey on research, PhD life, and more.
+---
+{%- assign tags = site.posts | map: "tag" | uniq | sort -%}
+<section class="first">
+  <h2 class="section-title">Writing</h2>
+
+  <div class="tag-filter" role="toolbar" aria-label="Filter by topic">
+    <button type="button" data-tag="all" aria-pressed="true">All <span>{{ site.posts.size }}</span></button>
+    {%- for t in tags %}
+    {%- assign n = site.posts | where: "tag", t | size %}
+    <button type="button" data-tag="{{ t | slugify }}" aria-pressed="false">{{ t }} <span>{{ n }}</span></button>
+    {%- endfor %}
+  </div>
+
+  <ul class="rows posts">
+    {% for post in site.posts %}
+    <li class="row" data-tag="{{ post.tag | slugify }}">
+      <div class="row-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+      <div>
+        <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.description %}<p class="post-excerpt">{{ post.description }}</p>{% endif %}
+        <p class="post-info">{% if post.tag %}<span class="tag">{{ post.tag }}</span><span class="dot">·</span>{% endif %}{% include reading_time.html content=post.content %}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="feed-link"><a href="{{ '/blog/feed.xml' | relative_url }}">RSS feed</a></p>
+</section>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.tag-filter button');
+    var rows = document.querySelectorAll('.posts .row');
+    function apply(tag) {
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.tag === tag); });
+      rows.forEach(function (r) { r.hidden = tag !== 'all' && r.dataset.tag !== tag; });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        apply(b.dataset.tag);
+        history.replaceState(null, '', b.dataset.tag === 'all' ? location.pathname : '#' + b.dataset.tag);
+      });
+    });
+    var initial = location.hash.slice(1);
+    if (initial && document.querySelector('.tag-filter [data-tag="' + initial + '"]')) apply(initial);
+  })();
+</script>

@@ -1,1 +1,29 @@
-theme: jekyll-theme-cayman
+title: Rohan Pandey
+description: PhD student at the Bio-NLP Lab, UMass Amherst, working on robust and reliable machine learning for healthcare.
+tagline: PhD Student, UMass Amherst
+author: Rohan Pandey
+url: https://rohanpandey.github.io
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: blog/feed.xml
+
+exclude:
+  - README.md
+  - index.md
+  - .claude
+  - scripts
+  - WRITING.md
+  - Gemfile
+  - Gemfile.lock

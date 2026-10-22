@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<div class="progress" aria-hidden="true"></div>
+<article class="post">
+  <aside class="toc-side" hidden><nav class="toc" aria-label="Outline"><p class="toc-label">Outline</p><ol></ol></nav></aside>
+  <header class="post-header">
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.tag %}<span class="dot">·</span><a class="tag" href="{{ '/blog/' | relative_url }}#{{ page.tag | slugify }}">{{ page.tag }}</a>{% endif %}
+      <span class="dot">·</span>{% include reading_time.html content=content %}
+    </p>
+    <h1 class="post-heading">{{ page.title }}</h1>
+    {% if page.description %}<p class="post-dek">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <details class="toc-inline" hidden>
+    <summary>Contents</summary>
+    <nav class="toc" aria-label="Contents"><ol></ol></nav>
+  </details>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {% if page.original %}
+  <aside class="post-original">
+    Originally written in Google Docs. <a href="{{ page.original }}">Read the original &rarr;</a>
+  </aside>
+  {% endif %}
+
+  <a class="to-top" href="#top">↑ Back to top</a>
+
+  <nav class="post-nav">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span>← Older</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}"><span>Newer →</span>{{ page.next.title }}</a>{% endif %}
+  </nav>
+</article>
+
+<script>
+  (function () {
+    var prose = document.querySelector('.prose');
+    var all = Array.prototype.slice.call(prose.querySelectorAll('h2, h3, h4')).filter(function (h) { return h.id; });
+
+    // Use the two shallowest heading levels the post actually uses, like the Docs outline
+    var levels = all.map(function (h) { return +h.tagName[1]; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
+    var top = levels[0], sub = levels[1];
+    var heads = all.filter(function (h) { var l = +h.tagName[1]; return l === top || l === sub; });
+
+    var progress = document.querySelector('.progress');
+    function onScroll() {
+      var r = prose.getBoundingClientRect();
+      var total = r.height - innerHeight * 0.6;
+      progress.style.transform = 'scaleX(' + Math.min(1, Math.max(0, -r.top / total)) + ')';
+    }
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    if (heads.length < 3) return;
+
+    var links = [];
+    document.querySelectorAll('.toc ol').forEach(function (ol) {
+      heads.forEach(function (h) {
+        var li = document.createElement('li');
+        if (+h.tagName[1] !== top) li.className = 'sub';
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent;
+        a.dataset.target = h.id;
+        li.appendChild(a);
+        ol.appendChild(li);
+        links.push(a);
+      });
+    });
+    document.querySelector('.toc-side').hidden = false;
+    document.querySelector('.toc-inline').hidden = false;
+
+    // Highlight the section currently being read
+    function spy() {
+      var current = heads[0].id;
+      for (var i = 0; i < heads.length; i++) {
+        if (heads[i].getBoundingClientRect().top < 120) current = heads[i].id; else break;
+      }
+      links.forEach(function (a) { a.classList.toggle('active', a.dataset.target === current); });
+    }
+    addEventListener('scroll', spy, { passive: true });
+    spy();
+  })();
+</script>
