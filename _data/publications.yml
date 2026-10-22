@@ -1,0 +1,116 @@
+# Publications, newest first. Mark your own name with <me>...</me>.
+# authors_more (optional): extra authors hidden behind a "+ N more" toggle; authors_last is shown after it.
+# badge (optional): small pill like "Under review" or "Oral".
+
+- title: "Predicting first-episode homelessness among US Veterans using longitudinal EHR data: time-varying models and social risk factors"
+  url: https://arxiv.org/abs/2602.02731
+  authors: "<me>Rohan Pandey*</me>, Haijuan Yan, Hong Yu, Jack Tsai"
+  venue: Manuscript
+  year: 2026
+  badge: Under review
+  links:
+    - { label: arXiv, url: "https://arxiv.org/abs/2602.02731" }
+    - { label: PDF, url: "https://arxiv.org/pdf/2602.02731" }
+  bibtex: |
+    @misc{pandey2026homelessness,
+      title         = {Predicting first-episode homelessness among US Veterans using longitudinal EHR data: time-varying models and social risk factors},
+      author        = {Pandey, Rohan and Yan, Haijuan and Yu, Hong and Tsai, Jack},
+      year          = {2026},
+      eprint        = {2602.02731},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.CL},
+      url           = {https://arxiv.org/abs/2602.02731}
+    }
+
+- title: "A machine learning application for raising WASH awareness in the times of COVID-19 pandemic"
+  url: https://www.nature.com/articles/s41598-021-03869-6
+  authors: "<me>Rohan Pandey*</me>, Vaibhav Gautam, Ridam Pal, Harsh Bandhey,"
+  authors_more: "Lovedeep Singh Dhingra, Vihaan Misra, Himanshu Sharma, Chirag Jain, Kanav Bhagat, Arushi, Lajjaben Patel, Mudit Agarwal, Samprati Agrawal, Rishabh Jalan, Akshat Wadhwa, Ayush Garg, Yashwin Agrawal, Bhavika Rana, Ponnurangam Kumaraguru,"
+  authors_more_count: 15
+  authors_last: "Tavpritesh Sethi"
+  venue: Nature Scientific Reports
+  year: 2022
+  links:
+    - { label: Paper, url: "https://www.nature.com/articles/s41598-021-03869-6" }
+    - { label: Code, url: "https://github.com/tavlab-iiitd/WashKaro" }
+  bibtex: |
+    @article{pandey2022wash,
+      title     = {A machine learning application for raising WASH awareness in the times of COVID-19 pandemic},
+      author    = {Pandey, Rohan and Gautam, Vaibhav and Pal, Ridam and Bandhey, Harsh and Dhingra, Lovedeep Singh and Misra, Vihaan and Sharma, Himanshu and Jain, Chirag and Bhagat, Kanav and Arushi and Patel, Lajjaben and Agarwal, Mudit and Agrawal, Samprati and Jalan, Rishabh and Wadhwa, Akshat and Garg, Ayush and Agrawal, Yashwin and Rana, Bhavika and Kumaraguru, Ponnurangam and Sethi, Tavpritesh},
+      journal   = {Scientific Reports},
+      volume    = {12},
+      number    = {1},
+      year      = {2022},
+      publisher = {Springer Science and Business Media LLC},
+      doi       = {10.1038/s41598-021-03869-6}
+    }
+
+- title: "COVID-19 Mask Usage and Social Distancing in Social Media Images: Large-scale Deep Learning Analysis"
+  url: https://publichealth.jmir.org/2022/1/e26868
+  authors: "Asmit Kumar Singh*, Paras Mehan*, Divyanshu Sharma*, <me>Rohan Pandey*</me>, Tavpritesh Sethi, Ponnurangam Kumaraguru"
+  venue: JMIR Public Health and Surveillance
+  year: 2022
+  links:
+    - { label: Paper, url: "https://publichealth.jmir.org/2022/1/e26868" }
+  bibtex: |
+    @article{singh2022mask,
+      title     = {COVID-19 Mask Usage and Social Distancing in Social Media Images: Large-scale Deep Learning Analysis},
+      author    = {Singh, Asmit Kumar and Mehan, Paras and Sharma, Divyanshu and Pandey, Rohan and Sethi, Tavpritesh and Kumaraguru, Ponnurangam},
+      journal   = {JMIR Public Health and Surveillance},
+      volume    = {8},
+      number    = {1},
+      pages     = {e26868},
+      year      = {2022},
+      publisher = {JMIR Publications Inc.},
+      doi       = {10.2196/26868}
+    }
+
+- title: "COVIDScreen: Explainable deep learning framework for differential diagnosis of COVID-19 using chest X-Rays"
+  url: https://link.springer.com/article/10.1007/s00521-020-05636-6
+  authors: "Rajeev Kumar Singh*, <me>Rohan Pandey*</me>, Rishie Nandhan Babu*"
+  venue: Neural Computing and Applications
+  year: 2021
+  links:
+    - { label: Paper, url: "https://link.springer.com/article/10.1007/s00521-020-05636-6" }
+  bibtex: |
+    @article{singh2021covidscreen,
+      title     = {COVIDScreen: explainable deep learning framework for differential diagnosis of COVID-19 using chest X-rays},
+      author    = {Singh, Rajeev Kumar and Pandey, Rohan and Babu, Rishie Nandhan},
+      journal   = {Neural Computing and Applications},
+      volume    = {33},
+      number    = {14},
+      pages     = {8871--8892},
+      year      = {2021},
+      publisher = {Springer Science and Business Media LLC},
+      doi       = {10.1007/s00521-020-05636-6}
+    }
+
+- title: "Cervical Cancer Diagnosis using CervixNet — A Deep Learning Approach"
+  url: https://ieeexplore.ieee.org/document/8941985
+  authors: "Rohan Gorantla*, Rajeev Kumar Singh*, <me>Rohan Pandey*</me>, Mayank Jain*"
+  venue: IEEE BIBE (Bioinformatics and Bioengineering)
+  year: 2019
+  links:
+    - { label: Paper, url: "https://ieeexplore.ieee.org/document/8941985" }
+  bibtex: |
+    @inproceedings{gorantla2019cervixnet,
+      title     = {Cervical Cancer Diagnosis using CervixNet - A Deep Learning Approach},
+      author    = {Gorantla, Rohan and Singh, Rajeev Kumar and Pandey, Rohan and Jain, Mayank},
+      booktitle = {2019 IEEE 19th International Conference on Bioinformatics and Bioengineering (BIBE)},
+      pages     = {397--404},
+      year      = {2019},
+      publisher = {IEEE},
+      doi       = {10.1109/BIBE.2019.00078}
+    }
+
+# Hidden drafts carried over from the old site (uncomment to show):
+# - title: "Are Re-weighting Algorithms The Solution For Covariate Shift?"
+#   authors: "<me>Rohan Pandey*</me>, Kartikeya Chaturvedi, Utkarsh Sharma, Saloni Chugh, Rajeev Kumar Singh*"
+#   venue: Manuscript
+#   year: 2022
+#   badge: Under review
+# - title: "Fully Automatic Liver Disease and Hepatocellular Carcinoma Detection"
+#   authors: "<me>Rohan Pandey*</me>, Jason Jeong, Imon Banerjee, Judy Gichoya"
+#   venue: Manuscript
+#   year: 2022
+#   badge: Under review

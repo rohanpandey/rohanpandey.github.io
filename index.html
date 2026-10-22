@@ -34,57 +34,30 @@ image: /images/rohan.jpg
 <section id="publications">
   <h2 class="section-title">Publications</h2>
   <ol class="pubs">
-
+    {% for p in site.data.publications %}
     <li class="pub">
-      <span class="pub-title"><a href="https://arxiv.org/abs/2602.02731">Predicting first-episode homelessness among US Veterans using longitudinal EHR data: time-varying models and social risk factors</a></span>
-      <p class="authors"><span class="me">Rohan Pandey*</span>, Haijuan Yan, Hong Yu, Jack Tsai</p>
-      <p class="venue">Manuscript, 2026 <span class="badge">Under review</span></p>
-      <p class="pub-links"><a href="https://arxiv.org/abs/2602.02731">arXiv</a><a href="https://arxiv.org/pdf/2602.02731">PDF</a></p>
-    </li>
-
-    <li class="pub">
-      <span class="pub-title"><a href="https://www.nature.com/articles/s41598-021-03869-6">A machine learning application for raising WASH awareness in the times of COVID-19 pandemic</a></span>
+      <span class="pub-title"><a href="{{ p.url }}">{{ p.title }}</a></span>
       <p class="authors">
-        <span class="me">Rohan Pandey*</span>, Vaibhav Gautam, Ridam Pal, Harsh Bandhey,
-        <button class="more-toggle" type="button" onclick="this.nextElementSibling.hidden=false;this.remove()">+ 14 more,</button><span hidden>Lovedeep Singh Dhingra, Himanshu Sharma, Chirag Jain, Kanav Bhagat, Lajjaben Patel, Mudit Agarwal, Samprati Agrawal, Rishabh Jalan, Akshat Wadhwa, Ayush Garg, Vihaan Misra, Yashwin Agrawal, Bhavika Rana, Ponnurangam Kumaraguru,</span> Tavpritesh Sethi
+        {{ p.authors | replace: "<me>", '<span class="me">' | replace: "</me>", "</span>" }}
+        {%- if p.authors_more %}
+        <button class="more-toggle" type="button" onclick="this.nextElementSibling.hidden=false;this.remove()">+ {{ p.authors_more_count }} more,</button><span hidden>{{ p.authors_more }}</span>
+        {%- endif %}
+        {% if p.authors_last %}{{ p.authors_last }}{% endif %}
       </p>
-      <p class="venue">Nature Scientific Reports, 2022</p>
-      <p class="pub-links"><a href="https://www.nature.com/articles/s41598-021-03869-6">Paper</a><a href="https://github.com/tavlab-iiitd/WashKaro">Code</a></p>
+      <p class="pub-meta">
+        <span class="venue">{{ p.venue }}, {{ p.year }}</span>
+        {%- if p.badge %} <span class="badge">{{ p.badge }}</span>{% endif %}
+        {%- for l in p.links %}<span class="sep">·</span><a href="{{ l.url }}">{{ l.label }}</a>{% endfor -%}
+        {%- if p.bibtex %}<span class="sep">·</span><button type="button" class="bib-toggle" aria-expanded="false">BibTeX</button>{% endif -%}
+      </p>
+      {% if p.bibtex %}
+      <div class="bibtex" hidden>
+        <button type="button" class="bib-copy">Copy</button>
+        <pre><code>{{ p.bibtex | strip | xml_escape }}</code></pre>
+      </div>
+      {% endif %}
     </li>
-
-    <li class="pub">
-      <span class="pub-title"><a href="https://publichealth.jmir.org/2022/1/e26868">COVID-19 Mask Usage and Social Distancing in Social Media Images: Large-scale Deep Learning Analysis</a></span>
-      <p class="authors">Asmit Kumar Singh*, Paras Mehan*, Divyanshu Sharma*, <span class="me">Rohan Pandey*</span>, Tavpritesh Sethi, Ponnurangam Kumaraguru</p>
-      <p class="venue">JMIR Public Health and Surveillance, 2022</p>
-      <p class="pub-links"><a href="https://publichealth.jmir.org/2022/1/e26868">Paper</a></p>
-    </li>
-
-    <li class="pub">
-      <span class="pub-title"><a href="https://link.springer.com/article/10.1007/s00521-020-05636-6">COVIDScreen: Explainable deep learning framework for differential diagnosis of COVID-19 using chest X-Rays</a></span>
-      <p class="authors">Rajeev Kumar Singh*, <span class="me">Rohan Pandey*</span>, Rishie Nandhan Babu*</p>
-      <p class="venue">Neural Computing and Applications, 2021</p>
-      <p class="pub-links"><a href="https://link.springer.com/article/10.1007/s00521-020-05636-6">Paper</a></p>
-    </li>
-
-    <li class="pub">
-      <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/8941985">Cervical Cancer Diagnosis using CervixNet — A Deep Learning Approach</a></span>
-      <p class="authors">Rohan Gorantla*, Rajeev Kumar Singh*, <span class="me">Rohan Pandey*</span>, Mayank Jain*</p>
-      <p class="venue">IEEE BIBE (Bioinformatics and Bioengineering), 2019</p>
-      <p class="pub-links"><a href="https://ieeexplore.ieee.org/document/8941985">Paper</a></p>
-    </li>
-
-    <!--
-    <li class="pub">
-      <span class="pub-title">Are Re-weighting Algorithms The Solution For Covariate Shift?</span>
-      <p class="authors"><span class="me">Rohan Pandey*</span>, <a href="https://in.linkedin.com/in/kartikeya-chaturvedi-8218061a5">Kartikeya Chaturvedi</a>, <a href="https://utk61198.github.io/">Utkarsh Sharma</a>, Saloni Chugh, <a href="https://cse.snu.edu.in/people/faculty/rajeev-singh">Rajeev Kumar Singh*</a></p>
-      <p class="venue"><span class="badge">Under review</span></p>
-    </li>
-    <li class="pub">
-      <span class="pub-title">Fully Automatic Liver Disease and Hepatocellular Carcinoma Detection</span>
-      <p class="authors"><span class="me">Rohan Pandey*</span>, Jason Jeong, <a href="https://labs.engineering.asu.edu/banerjeelab/person/imon-banerjee/">Imon Banerjee</a>, <a href="https://www.gichoya.me/">Judy Gichoya</a></p>
-      <p class="venue"><span class="badge">Under review</span></p>
-    </li>
-    -->
+    {% endfor %}
   </ol>
 </section>
 
@@ -131,6 +104,38 @@ image: /images/rohan.jpg
   </ul>
 </section>
 
+{% if site.data.mentees and site.data.mentees.size > 0 %}
+<section id="mentees">
+  <h2 class="section-title">Mentees</h2>
+  <p class="section-note">Students I've had the joy of working with.</p>
+  <ul class="rows">
+    {% for m in site.data.mentees %}
+    <li class="row">
+      <div class="row-date">{{ m.when }}</div>
+      <div>
+        {% if m.url %}<a class="org" href="{{ m.url }}">{{ m.name }}</a>{% else %}<span class="org">{{ m.name }}</span>{% endif %}
+        {% if m.now %}<p class="role">Now: {{ m.now }}</p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if site.data.service and site.data.service.size > 0 %}
+<section id="service">
+  <h2 class="section-title">Service &amp; Awards</h2>
+  <ul class="rows">
+    {% for item in site.data.service %}
+    <li class="row">
+      <div class="row-date">{{ item.year }}</div>
+      <div class="role">{{ item.text }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
 <!--
 <section>
   <h2 class="section-title">Selected Projects</h2>
@@ -150,3 +155,20 @@ image: /images/rohan.jpg
   </ul>
 </section>
 -->
+
+<script>
+  document.querySelectorAll('.bib-toggle').forEach(function (btn) {
+    var box = btn.closest('.pub').querySelector('.bibtex');
+    btn.addEventListener('click', function () {
+      box.hidden = !box.hidden;
+      btn.setAttribute('aria-expanded', !box.hidden);
+    });
+    box.querySelector('.bib-copy').addEventListener('click', function () {
+      var b = this;
+      navigator.clipboard.writeText(box.querySelector('code').textContent).then(function () {
+        b.textContent = 'Copied';
+        setTimeout(function () { b.textContent = 'Copy'; }, 1500);
+      });
+    });
+  });
+</script>
