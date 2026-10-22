@@ -111,39 +111,6 @@ image: /images/rohan.jpg
     </li>
   </ul>
 </section>
-
-{% if site.data.mentees and site.data.mentees.size > 0 %}
-<section id="mentees">
-  <h2 class="section-title">Mentees</h2>
-  <p class="section-note">Students I've had the joy of working with.</p>
-  <ul class="rows">
-    {% for m in site.data.mentees %}
-    <li class="row">
-      <div class="row-date">{{ m.when }}</div>
-      <div>
-        {% if m.url %}<a class="org" href="{{ m.url }}">{{ m.name }}</a>{% else %}<span class="org">{{ m.name }}</span>{% endif %}
-        {% if m.now %}<p class="role">Now: {{ m.now }}</p>{% endif %}
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-
-{% if site.data.service and site.data.service.size > 0 %}
-<section id="service">
-  <h2 class="section-title">Service &amp; Awards</h2>
-  <ul class="rows">
-    {% for item in site.data.service %}
-    <li class="row">
-      <div class="row-date">{{ item.year }}</div>
-      <div class="role">{{ item.text }}</div>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-
 <!--
 <section>
   <h2 class="section-title">Selected Projects</h2>

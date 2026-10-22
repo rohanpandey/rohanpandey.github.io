@@ -581,7 +581,6 @@ section.first { margin-top: 0; }
 }
 .bib-copy:hover { color: var(--text); }
 
-.section-note { color: var(--muted); font-size: 15px; margin: -8px 0 16px; }
 
 @media (max-width: 640px) {
 }

@@ -7,8 +7,6 @@ Personal site, built with Jekyll and published automatically by GitHub Pages on 
 Most homepage content lives in small YAML lists in `_data/`. Add an entry to the top and push:
 
 - `_data/publications.yml`: papers, with links and BibTeX
-- `_data/mentees.yml`: students you've mentored (section hidden until it has entries)
-- `_data/service.yml`: service, awards, talks (section hidden until it has entries)
 
 ## Writing a new blog post
 
