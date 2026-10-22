@@ -21,6 +21,9 @@ plugins:
 image: /images/rohan.jpg
 twitter:
   card: summary
+# Shown in the intro and llms.txt; delete or comment out when not looking
+seeking: research internships for Summer 2027
+
 # Research keywords used in structured data and llms.txt (keep these accurate)
 keywords:
   - Machine learning

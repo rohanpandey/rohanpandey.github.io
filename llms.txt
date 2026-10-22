@@ -10,7 +10,8 @@ sitemap: false
 - Lab: Bio-NLP Lab (https://bio-nlp.org/), advised by Prof. Hong Yu
 - Previously: McKinsey & Company (product owner and engineer on AI-powered spend analytics: Source AI, Spendscape); research at HITI Lab, Emory University and TavLab, IIITD
 - Education: B.Tech in Computer Science & Engineering, Shiv Nadar University (High Distinction)
-- Email: rohanpandey@umass.edu
+{% if site.seeking %}- Availability: Seeking {{ site.seeking }}
+{% endif %}- Email: rohanpandey@umass.edu
 - Website: {{ site.url }}/
 - Google Scholar: https://scholar.google.com/citations?user=Xdlmg9IAAAAJ
 - GitHub: https://github.com/rohanpandey

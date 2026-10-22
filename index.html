@@ -5,7 +5,7 @@ image: /images/rohan.jpg
 <header class="intro">
   <div>
     <h1 class="name">Rohan Pandey</h1>
-    <p class="tagline">PhD Student · Bio-NLP Lab, UMass Amherst</p>
+    <p class="tagline">PhD Student · ML &amp; NLP for Healthcare · UMass Amherst</p>
 
     <div class="bio">
       <p>
@@ -17,11 +17,11 @@ image: /images/rohan.jpg
       <p class="list-lead">I spend most of my time thinking about:</p>
       <ul class="interests">
         <li><strong>AI for healthcare:</strong> using AI to tackle important public-health challenges, like <a href="https://arxiv.org/abs/2602.02731">homelessness</a> and <a href="https://arxiv.org/abs/2609.40108">opioid overdose</a>, and understanding what it takes to make AI work in real-world healthcare settings, from messy electronic health records (EHRs) to clinical workflows.</li>
-        <li><strong>Science of AI:</strong> understanding what makes AI systems work (or fail), and how we can make them better.</li>
+        <li><strong>Science of AI:</strong> understanding what makes AI systems, especially large language models (LLMs), work (or fail), and how we can make them better.</li>
         <li><strong>AI for science:</strong> building tools that help scientists do better science (e.g., <a href="https://arxiv.org/abs/2609.00313">MUSES</a>), and understanding what widespread AI use means for the practice, validity, and communication of science.</li>
       </ul>
       <p>
-        I'm always open to interesting research conversations and collaborations, and I enjoy mentoring students and early-career professionals navigating their academic and career paths. I've been fortunate to receive a lot of support and guidance along the way, and I hope to pay that forward. If you'd like to collaborate, seek advice, or simply connect, feel free to <a href="mailto:rohanpandey@umass.edu">reach out</a>!
+        {% if site.seeking %}I'm looking for <strong>{{ site.seeking }}</strong>. {% endif %}I'm always open to interesting research conversations and collaborations, and I enjoy mentoring students and early-career professionals navigating their academic and career paths. I've been fortunate to receive a lot of support and guidance along the way, and I hope to pay that forward. If you'd like to collaborate, seek advice, or simply connect, feel free to <a href="mailto:rohanpandey@umass.edu">reach out</a>!
       </p>
     </div>
 
