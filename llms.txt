@@ -10,7 +10,7 @@ sitemap: false
 - Lab: Bio-NLP Lab (https://bio-nlp.org/), advised by Prof. Hong Yu
 - Previously: McKinsey & Company (product owner and engineer on AI-powered spend analytics: Source AI, Spendscape); research at HITI Lab, Emory University and TavLab, IIITD
 - Education: B.Tech in Computer Science & Engineering, Shiv Nadar University (High Distinction)
-{% if site.seeking %}- Availability: Seeking {{ site.seeking }}
+{% if site.seeking %}- Availability: Seeking {{ site.seeking }}{% if site.seeking_detail %}, {{ site.seeking_detail }}{% endif %}
 {% endif %}- Email: rohanpandey@umass.edu
 - Website: {{ site.url }}/
 - Google Scholar: https://scholar.google.com/citations?user=Xdlmg9IAAAAJ
@@ -19,9 +19,9 @@ sitemap: false
 
 ## Research interests
 
+- AI for science: how AI can be genuinely useful to scientists (e.g. helping them find the lesser-known prior work that sparks new ideas, as in MUSES), and what widespread AI use means for how science is done, validated, and communicated.
 - AI for healthcare: using AI to tackle public-health challenges (homelessness, opioid overdose) and making AI work in real-world healthcare settings, from messy electronic health records (EHRs) to clinical workflows.
-- Science of AI: understanding what makes AI systems work or fail, and how to make them better.
-- AI for science: building tools that help scientists do better science, and understanding what widespread AI use means for the practice, validity, and communication of science.
+- Science of AI: understanding what makes AI systems, especially large language models (LLMs), work or fail, and how to make them better.
 
 ## Keywords
 
