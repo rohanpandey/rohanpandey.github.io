@@ -70,3 +70,6 @@ exclude:
   - WRITING.md
   - Gemfile
   - Gemfile.lock
+
+include:
+  - .well-known

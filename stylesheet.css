@@ -57,7 +57,7 @@ body {
 }
 
 .page {
-  max-width: 760px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 28px 24px 48px;
 }
@@ -279,7 +279,7 @@ section.first { margin-top: 0; }
 .feed-link a { color: var(--faint); }
 
 /* ---------- Blog post ---------- */
-.post { max-width: 660px; }
+.post { max-width: 680px; margin: 0 auto; }
 .post-header { margin-bottom: 40px; }
 .post-meta { font-size: 13.5px; color: var(--faint); margin: 0 0 10px; }
 .post-meta .tag { margin: 0; font-size: 11px; }
@@ -399,14 +399,21 @@ section.first { margin-top: 0; }
 .post-meta a.tag { color: var(--muted); }
 .post-meta a.tag:hover { color: var(--accent-hover); }
 
-.post-original {
-  margin-top: 48px;
-  padding: 14px 18px;
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  font-size: 14px;
-  color: var(--muted);
+.post-source {
+  margin: 18px 0 0;
+  font-size: 13.5px;
+  color: var(--faint);
 }
+.post-source a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); }
+.post-source a:hover { color: var(--accent-hover); }
+
+.post-rights {
+  margin-top: 48px;
+  font-size: 12.5px;
+  color: var(--faint);
+}
+.post-info .doc-link { color: var(--faint); }
+.post-info .doc-link:hover { color: var(--accent-hover); }
 
 .tag-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: -4px 0 20px; }
 .tag-filter button {

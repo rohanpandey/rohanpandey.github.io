@@ -2,7 +2,14 @@
 layout: null
 sitemap: false
 ---
+# Search engines and everyone else: welcome.
 User-agent: *
 Allow: /
+
+# AI training and scraping crawlers: please don't use the blog.
+# (The homepage stays open so research profiles and recruiters' tools can find me.)
+{% assign ai_bots = "GPTBot,ChatGPT-User,OAI-SearchBot,ClaudeBot,Claude-Web,anthropic-ai,Google-Extended,CCBot,PerplexityBot,Perplexity-User,Bytespider,Applebot-Extended,Meta-ExternalAgent,Meta-ExternalFetcher,FacebookBot,Amazonbot,cohere-ai,cohere-training-data-crawler,Diffbot,Omgilibot,ImagesiftBot,Timpibot,YouBot,DuckAssistBot,AI2Bot,PanguBot,Kangaroo Bot" | split: "," %}
+{% for bot in ai_bots %}User-agent: {{ bot }}
+{% endfor %}Disallow: /blog/
 
 Sitemap: {{ site.url }}/sitemap.xml

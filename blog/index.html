@@ -22,7 +22,7 @@ description: Writing by Rohan Pandey on research, PhD life, and more.
       <div>
         <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         {% if post.description %}<p class="post-excerpt">{{ post.description }}</p>{% endif %}
-        <p class="post-info">{% if post.tag %}<span class="tag">{{ post.tag }}</span><span class="dot">·</span>{% endif %}{% include reading_time.html content=post.content %}</p>
+        <p class="post-info">{% if post.tag %}<span class="tag">{{ post.tag }}</span><span class="dot">·</span>{% endif %}{% include reading_time.html content=post.content %}{% if post.original %}<span class="dot">·</span><a class="doc-link" href="{{ post.original }}">Google Doc</a>{% endif %}</p>
       </div>
     </li>
     {% endfor %}

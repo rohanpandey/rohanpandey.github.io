@@ -8,6 +8,12 @@
     try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
   {% seo %}
+  {% if page.layout == "post" %}
+  <!-- Opt out of AI training / text-and-data mining for blog posts -->
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+  <meta name="tdm-policy" content="{{ site.url }}/.well-known/tdmrep.json">
+  {% endif %}
   {% feed_meta %}
   {% if page.url == "/" %}
   <script type="application/ld+json">

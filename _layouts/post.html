@@ -12,6 +12,9 @@ layout: default
     </p>
     <h1 class="post-heading">{{ page.title }}</h1>
     {% if page.description %}<p class="post-dek">{{ page.description }}</p>{% endif %}
+    {% if page.original %}
+    <p class="post-source">Converted from the original Google Doc, so some formatting may differ. <a href="{{ page.original }}">Read the original &rarr;</a></p>
+    {% endif %}
   </header>
 
   <details class="toc-inline" hidden>
@@ -23,11 +26,7 @@ layout: default
     {{ content }}
   </div>
 
-  {% if page.original %}
-  <aside class="post-original">
-    Originally written in Google Docs. <a href="{{ page.original }}">Read the original &rarr;</a>
-  </aside>
-  {% endif %}
+  <p class="post-rights">&copy; {{ page.date | date: "%Y" }} Rohan Pandey. All rights reserved. This writing may not be copied, republished, or used to train AI models without permission.</p>
 
   <a class="to-top" href="#top">↑ Back to top</a>
 
