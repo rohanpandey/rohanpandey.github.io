@@ -3,6 +3,11 @@ layout: default
 image: /images/rohan.jpg
 ---
 <header class="intro">
+  <aside class="side">
+    <a class="portrait-link" href="{{ '/images/rohan.jpg' | relative_url }}">
+      <img class="portrait round" src="{{ '/images/rohan.jpg' | relative_url }}" alt="Photo of Rohan Pandey" width="168" height="168">
+    </a>
+  </aside>
   <div>
     <h1 class="name">Rohan Pandey</h1>
     <p class="tagline">PhD Student · ML &amp; NLP for Science &amp; Healthcare · UMass Amherst</p>
@@ -34,11 +39,6 @@ image: /images/rohan.jpg
 
   </div>
 
-  <aside class="side">
-    <a class="portrait-link" href="{{ '/images/rohan.jpg' | relative_url }}">
-      <img class="portrait round" src="{{ '/images/rohan.jpg' | relative_url }}" alt="Photo of Rohan Pandey" width="168" height="168">
-    </a>
-  </aside>
 </header>
 
 <section id="publications">
